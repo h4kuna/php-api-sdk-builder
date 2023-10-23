@@ -136,7 +136,7 @@ public function getItemsPerPage(): int
 public function getTotalItems(): int
 public function getCurrentPage(): int
 public function getTotalPages(): int;
-public function onLastPage(): bool;
+public function isLastPage(): bool;
 ```
 
 **Implementation:**

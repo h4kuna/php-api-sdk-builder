@@ -37,8 +37,16 @@ trait PaginatedResponse
         return $this->totalPages;
     }
 
+	public function isLastPage(): bool
+	{
+		return $this->currentPage === $this->totalPages;
+	}
+
+	/**
+	 * @deprecated use isLastPage()
+	 */
     public function onLastPage(): bool
     {
-        return $this->currentPage === $this->totalPages;
+        return $this->isLastPage();
     }
 }
